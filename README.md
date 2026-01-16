@@ -1,4 +1,4 @@
-<b>Ada industrial control widget library</b>
+<H1>Ada industrial control widget library</H1>
 
 <p>The described here packages are provided for design high-quality industrial control widgets for Ada applications. The software is based on GtkAda, Ada bindings to GTK+ and cairo. The key features of the library:</p>
 <ul>
