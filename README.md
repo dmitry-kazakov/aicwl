@@ -126,3 +126,7 @@ straightforward and can be used as templates for customization.</p>
 		<img border="0" src="gtk_gauge_led_rectangular.png" width="231" height="43" alt="gauge led rectangular"></td>
 	</tr>
 	</table>
+
+Home page: https://www.dmitry-kazakov.de/ada/aicwl.htm
+
+Changes log: https://www.dmitry-kazakov.de/ada/aicwl.htm#changes_log
