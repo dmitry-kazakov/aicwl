@@ -1,0 +1,16 @@
+with "../gtkada_contributions.gpr";
+with "../components-gnade-gtk.gpr";
+
+project Components.GNADE.GTK.Tests is
+
+   for Source_Files use ("test_gtk_persistent_directory_browser.adb");
+   for Main use ("test_gtk_persistent_directory_browser.adb");
+   for Object_Dir use GtkAda_Contributions.Object_Dir_Path;
+
+   package Binder   renames Components.GNADE.GTK.Binder;
+   package Builder  renames Components.GNADE.GTK.Builder;
+   package Compiler renames Components.GNADE.GTK.Compiler;
+   package Linker   renames Components.GNADE.GTK.Linker;
+
+end Components.GNADE.GTK.Tests;
+

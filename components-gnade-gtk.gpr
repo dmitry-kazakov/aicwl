@@ -1,0 +1,43 @@
+with "components.gpr";
+with "gtkada_contributions.gpr";
+with "components-gnade.gpr";
+with "components-gtk.gpr";
+
+project Components.GNADE.GTK is
+
+   for Source_Dirs use (".");
+   for Source_Files use
+      (  "gtk-persistent_storage_credentials_dialog-odbc.adb",
+         "gtk-persistent_storage_credentials_dialog-odbc.ads"
+      );
+   for Object_Dir use GTKAda_Contributions'Object_Dir;
+
+   package Compiler is
+      for Default_Switches ("ada") use
+         Components.GNADE.Compiler'Default_Switches ("ada") &
+         GTKAda_Contributions.Compiler'Default_Switches ("ada");
+      for Default_Switches ("C") use
+         Components.GNADE.Compiler'Default_Switches ("C") &
+         GTKAda_Contributions.Compiler'Default_Switches ("C");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use
+         Components.GNADE.Binder'Default_Switches ("ada") &
+         GTKAda_Contributions.Binder'Default_Switches ("ada");
+   end Binder;
+
+   package Builder is
+      for Default_Switches ("ada") use
+         Components.GNADE.Builder'Default_Switches ("ada") &
+         GTKAda_Contributions.Builder'Default_Switches ("ada");
+   end Builder;
+
+   package Linker is
+      for Default_Switches ("ada") use
+         Components.GNADE.Linker'Default_Switches ("ada") &
+         GTKAda_Contributions.Linker'Default_Switches ("ada");
+   end Linker;
+
+end Components.GNADE.GTK;
+

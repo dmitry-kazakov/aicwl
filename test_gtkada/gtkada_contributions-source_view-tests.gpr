@@ -1,0 +1,16 @@
+with "../gtkada_contributions.gpr";
+with "../gtkada_contributions-source_view.gpr";
+
+project Gtkada_Contributions.Source_View.Tests is
+
+   for Source_Files use ("test_gtk_source_view.adb");
+   for Main use ("test_gtk_source_view.adb");
+   for Object_Dir use GtkAda_Contributions'Object_Dir;
+
+   package Binder   renames Gtkada_Contributions.Source_View.Binder;
+   package Builder  renames Gtkada_Contributions.Source_View.Builder;
+   package Compiler renames Gtkada_Contributions.Source_View.Compiler;
+   package Linker   renames Gtkada_Contributions.Source_View.Linker;
+
+end Gtkada_Contributions.Source_View.Tests;
+
